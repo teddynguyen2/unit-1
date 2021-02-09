@@ -46,12 +46,11 @@ function cities(){
     addEvents();
 };
 
-//adds columns, which includes city size
+//adds column, which includes different city sizes
 function addColumns(cityPop){
-    //adds columns for each city size
+    //adds each city size to the column
     $("tr").each(function(i){
     	if (i == 0){
-
     		$(this).append("<th>City Size</th>");
     	} else {
     		var citySize;
@@ -99,5 +98,5 @@ function addEvents(){
 	$("table").on('click', clickme);
 };
 
-//call the initialize function
+//document is ready and calls the initialize function
 $(document).ready(initialize);
