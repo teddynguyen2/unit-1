@@ -52,7 +52,7 @@ function addColumns(cityPop){
     $('tr').each(function(i){
     	if (i == 0){
 
-    		$(this).apend('<th>City Size</th>');
+    		$(this).append('<th>City Size</th>');
     	} else {
     		var citySize;
 
