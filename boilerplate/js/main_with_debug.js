@@ -79,7 +79,7 @@ function addEvents(){
 		//loop for obtaining random colors
 		for (var i=0; i<3; i++){
 			var random = Math.round(Math.random() * 255);
-			color += "random";
+			color += random;
 
 			if (i<2){
 				color += ",";
