@@ -89,6 +89,7 @@ function addEvents(){
 			
 			} else {
 				color += ")";
+			}
 		};
 
 		$(this).css('color', color);
