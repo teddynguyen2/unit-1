@@ -1,3 +1,12 @@
+function myfunc(){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML = "Hello World.";
+};
+
+window.onload = myfunc();
+
+/*
+
 //initialize function called when the script loads
 function initialize(){
 	cities();
@@ -89,3 +98,4 @@ function addEvents(){
 
 //call the initialize function
 $(document).ready(initialize);
+*/
