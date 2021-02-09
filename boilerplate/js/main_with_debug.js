@@ -46,62 +46,58 @@ function cities(){
     addEvents();
 };
 
+//adds columns, which includes city size
 function addColumns(cityPop){
-    
+    //adds columns for each city size
     $('tr').each(function(i){
-
     	if (i == 0){
 
     		$(this).apend('<th>City Size</th>');
     	} else {
-
     		var citySize;
 
     		if (cityPop[i-1].population < 100000){
     			citySize = 'Small';
-
     		} else if (cityPop[i-1].population < 500000){
     			citysize = 'Medium';
-
     		} else {
     			citySize = 'Large';
     		};
-
+		
+		//adds new city size
     		$this.append('<td' + citySize + '</td>');
     	};
     });
 };
 
+//adds colors when mouse is over desired location
 function addEvents(){
-
+	//checks if mouse is over desired location; changes colors
 	$('#table').mouseover(function(){
-		
 		var color = "rgb(";
-
+		
+		//loop for obtaining random colors
 		for (var i=0; i<3; i++){
-
 			var random = Math.round(Math.random() * 255);
-
 			color += "random";
 
 			if (i<2){
 				color += ",";
-			
 			} else {
 				color += ")";
 			}
 		};
-
+		//assigning colors
 		$(this).css('color', color);
 	});
-
+	
+	//pops alert message when user clicks table
 	function clickme(){
-
 		alert('Hey, you clicked me!');
 	};
-
+	
 	$('table').on('click', clickme);
 };
 
-//call the initialize function when the document has loaded
+//call the initialize function
 $(document).ready(initialize);
