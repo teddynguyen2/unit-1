@@ -49,7 +49,7 @@ function cities(){
 //adds columns, which includes city size
 function addColumns(cityPop){
     //adds columns for each city size
-    $('tr').each(function(i){
+    $("tr").each(function(i){
     	if (i == 0){
 
     		$(this).append('<th>City Size</th>');
@@ -65,7 +65,7 @@ function addColumns(cityPop){
     		};
 		
 		//adds new city size
-    		$this.append('<td' + citySize + '</td>');
+    		$(this).append('<td' + citySize + '</td>');
     	};
     });
 };
@@ -73,7 +73,7 @@ function addColumns(cityPop){
 //adds colors when mouse is over desired location
 function addEvents(){
 	//checks if mouse is over desired location; changes colors
-	$('#table').mouseover(function(){
+	$("table").mouseover(function(){
 		var color = "rgb(";
 		
 		//loop for obtaining random colors
@@ -96,7 +96,7 @@ function addEvents(){
 		alert('Hey, you clicked me!');
 	};
 	
-	$('table').on('click', clickme);
+	$("table").on('click', clickme);
 };
 
 //call the initialize function
