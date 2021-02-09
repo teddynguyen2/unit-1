@@ -1,4 +1,10 @@
 // Add all scripts to the JS folder
+function myfunc(){
+    var mydiv = document.getElementById("mydiv");
+    mydiv.innerHTML = "Hello World.";
+};
+
+window.onload = myfunc();
 
 //initialize function called when the script loads
 function initialize(){
@@ -9,18 +15,16 @@ function initialize(){
 function cities(){
     //define two arrays for cities and population
     var cities = [
-        'Washington, D.C.',
-        'São Paulo',
-        'Paris',
-        'London',
-        'Tokyo'
+        'Madison',
+        'Milwaukee',
+        'Green Bay',
+        'Superior'
     ];
     var population = [
-        692683,
-        12325232,
-        2148271,
-        9425622 ,
-        13929280
+        233209,
+        594833,
+        104057,
+        27244
     ];
 
     //create the table element
