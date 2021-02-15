@@ -1,14 +1,7 @@
-function myfunc(){
-    var mydiv = document.getElementById("mydiv");
-    mydiv.innerHTML = "Hello World.";
-};
-
-window.onload = myfunc();
-
-
 //initialize function called when the script loads
 function initialize(){
 	cities();
+	debugAjax();
 };
 
 //function to create a table with cities and their populations
