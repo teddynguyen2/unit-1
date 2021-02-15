@@ -126,8 +126,5 @@ function debugAjax(){
 	$(mydiv).append('<br>GeoJSON data:<br>' + JSON.stringify(mydata));
 };
 
-$(mydiv).append('GeoJSON data: ' + JSON.stringify(mydata));
-
-
 //document is ready and calls the initialize function
 $(document).ready(initialize);
