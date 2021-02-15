@@ -99,9 +99,9 @@ function addEvents(){
 	$("table").on('click', clickme);
 };
 
-function debugCallback(response){
+function debugCallback(mydata){
 	
-	$(mydiv).append('GeoJSON data: ' + JSON.stringify(mydata));
+	$("#mydiv").append('<br>GeoJSON data: <br>' + JSON.stringify(mydata));
 };
 
 function debugAjax(){
@@ -111,12 +111,10 @@ function debugAjax(){
 	$.ajax("data/MegaCities.geojson", {
 		dataType: "json",
 		success: function(response){
-			
+			var mydata = response; 
 			debugCallback(mydata);
 		}
 	});
-
-	$(mydiv).append('<br>GeoJSON data:<br>' + JSON.stringify(mydata));
 };
 
 //document is ready and calls the initialize function
