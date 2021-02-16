@@ -99,7 +99,7 @@ function addEvents(){
 	$("table").on('click', clickme);
 };
 
-//Checks the GeoJSON data and stringify the data
+//Checks the GeoJSON data and stringify the data.
 function debugCallback(mydata){
 	//call data, with a line break
 	$("#mydiv").append('<br>GeoJSON data: <br>' + JSON.stringify(mydata));
