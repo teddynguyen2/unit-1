@@ -119,4 +119,3 @@ function debugAjax(){
 
 //document is ready and calls the initialize function
 $(document).ready(initialize);
-$(document).ready(debugAjax);
