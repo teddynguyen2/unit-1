@@ -112,9 +112,11 @@ function debugAjax(){
 		dataType: "json",
 		success: function(response){
 			var mydata = response; 
+			console.log(mydata);
 			debugCallback(mydata);
 		}
 	});
+	console.log(mydata);
 };
 
 //document is ready and calls the initialize function
