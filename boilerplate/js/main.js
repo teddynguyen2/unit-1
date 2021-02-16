@@ -99,23 +99,32 @@ function addEvents(){
 	$("table").on('click', clickme);
 };
 
+//Checks the GeoJSON data and stringify the data
 function debugCallback(mydata){
-	
+	//call data, with a line break
 	$("#mydiv").append('<br>GeoJSON data: <br>' + JSON.stringify(mydata));
 };
 
 function debugAjax(){
-	
+	//variable mydata defined outside
 	var mydata;
 
+	//Access MegaCities.geojson file from the data folder
 	$.ajax("data/MegaCities.geojson", {
 		dataType: "json",
 		success: function(response){
+			
+			//mydata defined inside; cannot be accessed outside of function
 			var mydata = response; 
+			
+			//data can be accessed
 			console.log(mydata);
+			
+			//sends parameter type mydata to the debugCallback function
 			debugCallback(mydata);
 		}
 	});
+	//data cannot be accessed
 	console.log(mydata);
 };
 
